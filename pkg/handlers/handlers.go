@@ -42,6 +42,7 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 	stringMap["test"] = "Hello again"
 
 	remoteIP := m.App.Session.GetString(r.Context(), "remote_ip")
+
 	stringMap["remote_ip"] = remoteIP
 
 	// send the data to template
